@@ -29,8 +29,11 @@ public class Candidato implements Comparable<Candidato> {
            return this.nome.compareToIgnoreCase(c1.getNome()); 
         }
         
-        return Double.compare(this.nota, c1.getNota());
+        return Double.compare(c1.getNota(), this.nota);
     }
 
-    
+    @Override
+    public String toString() {
+        return this.nome + " - " + this.nota;
+    }
 }
